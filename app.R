@@ -1,10 +1,17 @@
-packages <- c("shiny", "shiny.router", "geojsonio", "highcharter", "shinyjs", "tidyverse", "shinycssloaders", "shinyBS", "r2d3", "shinyWidgets", "jsonlite", "taRifx")
-package.check <- lapply(packages, FUN = function(x) {
-  if (!require(x, character.only = TRUE)) {
-    install.packages(x, dependencies = TRUE)
-    library(x, character.only = TRUE)
-  }
-})
+# TeamBoleta! returns
+
+library(shiny)
+library(shiny.router)
+library(geojsonio)
+library(highcharter)
+library(shinyjs)
+library(tidyverse)
+library(shinycssloaders)
+library(shinyBS)
+library(r2d3)
+library(shinyWidgets)
+library(jsonlite)
+library(taRifx)
 
 comment_title <- function(...) {
   span(class="comment-title", ...)
